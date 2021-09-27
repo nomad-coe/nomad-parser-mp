@@ -27,19 +27,18 @@ from nomad.datamodel.metainfo.simulation.run import Run, Program
 from nomad.datamodel.metainfo.workflow import (
     Workflow, Elastic, EquationOfState, EOSFit, Thermodynamics, Stability, Decomposition,
     Phonon)
-from nomad.datamodel.metainfo.simulation.system import System, Atoms, Symmetry
+from nomad.datamodel.metainfo.simulation.system import System, Atoms
 from nomad.datamodel.metainfo.simulation.calculation import (
     Calculation, Dos, DosValues, BandStructure, BandEnergies)
-from mpparser.metainfo.mp import Composition
+from mpparser.metainfo.mp import Composition, Symmetry
 
 
 class MPParser(FairdiParser):
     def __init__(self):
         super().__init__(
-            name='parsers/materials-project', code_name='MaterialsProject',
+            name='parsers/mp', code_name='MaterialsProject',
             code_homepage='https://materialsproject.org',
-            mainfile_mime_re=r'(application/json)',
-            mainfile_name_re=r'.*mp.*materials.*\.json.*',
+            mainfile_name_re=r'.*mp.+materials\.json.*',
             mainfile_contents_re=(r'"pymatgen_version":'))
 
     def init_parser(self):
@@ -129,17 +128,17 @@ class MPParser(FairdiParser):
         sec_phonon.force_calculator = 'vasp'
 
         calculations = self.archive.run[-1].calculation
-        sec_scc = calculations[-1] if calculations else self.archive.run[-1].m_create(Calculation)
+        calc = calculations[-1] if calculations else self.archive.run[-1].m_create(Calculation)
 
         if data.get('ph_dos') is not None:
-            sec_dos = sec_scc.m_create(Dos, Calculation.dos_phonon)
+            sec_dos = calc.m_create(Dos, Calculation.dos_phonon)
             sec_dos.energies = data['ph_dos']['frequencies'] * ureg.THz * ureg.h
             dos = data['ph_dos']['densities'] * (1 / (ureg.THz * ureg.h))
             sec_dos.total.append(DosValues(value=dos))
 
         if data.get('ph_bs') is not None:
             sec_phonon.with_non_analytic_correction = data['ph_bs'].get('has_nac')
-            sec_bs = sec_scc.m_create(BandStructure, Calculation.band_structure_phonon)
+            sec_bs = calc.m_create(BandStructure, Calculation.band_structure_phonon)
             bands = np.transpose(data['ph_bs']['bands'])
             qpoints = data['ph_bs']['qpoints']
             labels = data['ph_bs']['labels_dict']
@@ -157,6 +156,8 @@ class MPParser(FairdiParser):
                 sec_segment.kpoints = qpoints[endpoints[0]: endpoints[1] + 1]
                 sec_segment.endpoints_labels = [labels[hisym_qpts.index(qpoints[i])] for i in endpoints]
                 endpoints = []
+
+        calc.system_ref = self.archive.run[-1].system[0]
 
         # TODO add eigendisplacements
 
@@ -181,6 +182,7 @@ class MPParser(FairdiParser):
             sec_atoms = sec_system.m_create(Atoms)
             if cell is not None:
                 sec_atoms.lattice_vectors = cell * ureg.angstrom
+                sec_atoms.periodic = [True, True, True]
             if positions:
                 sec_atoms.positions = positions * ureg.angstrom
             if labels:
@@ -198,7 +200,10 @@ class MPParser(FairdiParser):
         if symmetry is not None:
             sec_symmetry = sec_system.m_create(Symmetry)
             for key, val in symmetry.items():
-                setattr(sec_symmetry, 'x_mp_%s' % key, val)
+                try:
+                    setattr(sec_symmetry, 'x_mp_%s' % key, val)
+                except Exception:
+                    pass
 
         # misc
         sec_system.x_mp_elements = [e['element'] for e in self.data.get('elements', [])]

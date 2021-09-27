@@ -43,7 +43,7 @@ def test_all(parser):
     assert sec_system.atoms.lattice_vectors[1][2].magnitude == approx(2.734364e-10)
     assert sec_system.atoms.positions[0][0].magnitude == approx(1.367182e-10)
     assert sec_system.x_mp_composition_reduced[0].x_mp_value == approx(1.0)
-    assert sec_system.symmetry[0].x_mp_symprec == approx(0.1)
+    assert sec_system.x_mp_symmetry[0].x_mp_symprec == approx(0.1)
     assert sec_system.x_mp_elements[0] == 'Si'
     assert sec_system.x_mp_volume == approx(40.88829284866483)
     assert sec_system.x_mp_formula_anonymous == 'A'

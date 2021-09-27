@@ -179,8 +179,9 @@ class Composition(MSection):
         ''')
 
 
-class Symmetry(simulation.system.Symmetry):
-    m_def = Section(validate=False, extends_base_section=True)
+class Symmetry(MSection):
+
+    m_def = Section(validate=False)
 
     x_mp_symprec = Quantity(
         type=np.dtype(np.float64),
@@ -294,6 +295,8 @@ class System(simulation.system.System):
         shape=[],
         description='''
         ''')
+
+    x_mp_symmetry = SubSection(sub_section=Symmetry.m_def, repeats=True)
 
     x_mp_composition = SubSection(sub_section=Composition.m_def, repeats=True)
 
