@@ -27,16 +27,15 @@ from nomad.datamodel.metainfo.simulation.run import Run, Program
 from nomad.datamodel.metainfo.workflow import (
     Workflow, Elastic, EquationOfState, EOSFit, Thermodynamics, Stability, Decomposition,
     Phonon)
-from nomad.datamodel.metainfo.simulation.system import System, Atoms
+from nomad.datamodel.metainfo.simulation.system import System, Atoms, Symmetry
 from nomad.datamodel.metainfo.simulation.calculation import (
     Calculation, Dos, DosValues, BandStructure, BandEnergies)
-from mpparser.metainfo.mp import Calculation, Composition, Symmetry
+from mpparser.metainfo.mp import Composition
 
 
 class MPParser(FairdiParser):
     def __init__(self):
         super().__init__(
-
             name='parsers/materials-project', code_name='MaterialsProject',
             code_homepage='https://materialsproject.org',
             mainfile_mime_re=r'(application/json)',
@@ -55,17 +54,18 @@ class MPParser(FairdiParser):
         sec_elastic = sec_workflow.m_create(Elastic)
         sec_elastic.energy_stress_calculator = 'VASP'
         sec_elastic.calculation_method = 'stress'
+        source = source.get('elasticity', source)
         sec_elastic.elastic_constants_order = source.get('order', 2)
 
         deformations = source.get('deformations')
         if deformations is not None:
             sec_elastic.n_deformations = len(deformations)
 
-        elastic_tensor = source.get('elastic_tensor', {})
+        elastic_tensor = source.get('elastic_tensor')
         if elastic_tensor is not None:
             sec_elastic.elastic_constants_matrix_second_order = elastic_tensor * ureg.GPa
 
-        compliance_tensor = source.get('compliance_tensor', {})
+        compliance_tensor = source.get('compliance_tensor')
         if compliance_tensor is not None:
             sec_elastic.compliance_matrix_second_order = compliance_tensor * (1 / ureg.GPa)
 
@@ -78,11 +78,11 @@ class MPParser(FairdiParser):
         if source.get('homogeneous_poisson') is not None:
             sec_elastic.poisson_ratio_hill = source['homogeneous_poisson']
         if source.get('k_reuss') is not None:
-            sec_elastic.bulk_modulus_reuss = source['g_reuss'] * ureg.GPa
+            sec_elastic.bulk_modulus_reuss = source['k_reuss'] * ureg.GPa
         if source.get('k_voigt') is not None:
-            sec_elastic.bulk_modulus_voigt = source['g_voigt'] * ureg.GPa
+            sec_elastic.bulk_modulus_voigt = source['k_voigt'] * ureg.GPa
         if source.get('k_vrh') is not None:
-            sec_elastic.bulk_modulus_hill = source['g_vrh'] * ureg.GPa
+            sec_elastic.bulk_modulus_hill = source['k_vrh'] * ureg.GPa
 
     def parse_eos(self, source):
         sec_workflow = self.archive.m_create(Workflow)
@@ -92,19 +92,19 @@ class MPParser(FairdiParser):
             sec_eos.volumes = source['volumes'] * ureg.angstrom ** 3
         if source.get('energies') is not None:
             sec_eos.energies = source['energies'] * ureg.eV
-        for fit_function, result in source.get('eos', {}):
+        for fit_function, result in source.get('eos', {}).items():
             sec_eos_fit = sec_eos.m_create(EOSFit)
-            sec_eos_fit.fit_function = fit_function
+            sec_eos_fit.function_name = fit_function
             if result.get('B') is not None:
-                sec_eos.bulk_modulus = result['B'] * ureg.eV / ureg.angstrom ** 3
+                sec_eos_fit.bulk_modulus = result['B'] * ureg.eV / ureg.angstrom ** 3
             if result.get('C') is not None:
-                sec_eos.bulk_modulus_derivative = result['C']
+                sec_eos_fit.bulk_modulus_derivative = result['C']
             if result.get('E0') is not None:
-                sec_eos.equilibrium_energy = result['E0'] * ureg.eV
+                sec_eos_fit.equilibrium_energy = result['E0'] * ureg.eV
             if result.get('V0') is not None:
-                sec_eos.equilibrium_energy = result['C0'] * ureg.angstrom ** 3
+                sec_eos_fit.equilibrium_volume = result['V0'] * ureg.angstrom ** 3
             if result.get('eos_energies') is not None:
-                sec_eos.fitted_energies = result['eos_energies'] * ureg.eV
+                sec_eos_fit.fitted_energies = result['eos_energies'] * ureg.eV
 
     def parse_thermo(self, data):
         sec_workflow = self.archive.m_create(Workflow)
@@ -112,13 +112,14 @@ class MPParser(FairdiParser):
         sec_thermo = sec_workflow.m_create(Thermodynamics)
         sec_stability = sec_thermo.m_create(Stability)
         sec_stability.formation_energy = data.get(
-            'uncorrected_energy_per_atom', 0) * data.get('nsites', 1) * ureg.eV
+            'formation_energy_per_atom', 0) * data.get('nsites', 1) * ureg.eV
         sec_stability.delta_formation_energy = data.get('energy_above_hull', 0) * ureg.eV
         sec_stability.is_stable = data.get('is_stable')
-        for system in data.get('decomposes_to', []):
-            sec_decomposition = sec_stability.m_create(Decomposition)
-            sec_decomposition.formula = system.get('formula')
-            sec_decomposition.fraction = system.get('amount')
+        if data.get('decomposes_to') is not None:
+            for system in data.get('decomposes_to'):
+                sec_decomposition = sec_stability.m_create(Decomposition)
+                sec_decomposition.formula = system.get('formula')
+                sec_decomposition.fraction = system.get('amount')
 
     def parse_phonon(self, data):
         sec_workflow = self.archive.m_create(Workflow)
@@ -127,7 +128,7 @@ class MPParser(FairdiParser):
         # TODO is vasp always mp calculator?
         sec_phonon.force_calculator = 'vasp'
 
-        calculations = self.archive.run[-1].calculations
+        calculations = self.archive.run[-1].calculation
         sec_scc = calculations[-1] if calculations else self.archive.run[-1].m_create(Calculation)
 
         if data.get('ph_dos') is not None:
@@ -138,7 +139,7 @@ class MPParser(FairdiParser):
 
         if data.get('ph_bs') is not None:
             sec_phonon.with_non_analytic_correction = data['ph_bs'].get('has_nac')
-            sec_bs = sec_scc.m_create(BandStructure)
+            sec_bs = sec_scc.m_create(BandStructure, Calculation.band_structure_phonon)
             bands = np.transpose(data['ph_bs']['bands'])
             qpoints = data['ph_bs']['qpoints']
             labels = data['ph_bs']['labels_dict']
@@ -152,7 +153,7 @@ class MPParser(FairdiParser):
                     continue
                 sec_segment = sec_bs.m_create(BandEnergies)
                 energies = bands[endpoints[0]: endpoints[1] + 1]
-                sec_segment.energies = np.reshape(energies, (1, *np.shape(energies)))
+                sec_segment.energies = np.reshape(energies, (1, *np.shape(energies))) * ureg.THz * ureg.h
                 sec_segment.kpoints = qpoints[endpoints[0]: endpoints[1] + 1]
                 sec_segment.endpoints_labels = [labels[hisym_qpts.index(qpoints[i])] for i in endpoints]
                 endpoints = []
@@ -186,23 +187,26 @@ class MPParser(FairdiParser):
                 sec_atoms.labels = labels
 
         for key, val in self.data.get('composition', {}).items():
-            sec_system.x_aflow_composition.append(
-                Composition(x_aflow_label=key, x_aflow_value=val))
+            sec_system.x_mp_composition.append(
+                Composition(x_mp_label=key, x_mp_value=val))
 
         for key, val in self.data.get('composition_reduced', {}).items():
-            sec_system.x_aflow_composition_reduced.append(
-                Composition(x_aflow_label=key, x_aflow_value=val))
+            sec_system.x_mp_composition_reduced.append(
+                Composition(x_mp_label=key, x_mp_value=val))
 
         symmetry = self.data.get('symmetry')
         if symmetry is not None:
             sec_symmetry = sec_system.m_create(Symmetry)
             for key, val in symmetry.items():
-                setattr(sec_symmetry, 'x_aflow_%s' % key, val)
+                setattr(sec_symmetry, 'x_mp_%s' % key, val)
 
         # misc
-        sec_system.x_aflow_elements = [e['element'] for e in self.data.get('elements', [])]
+        sec_system.x_mp_elements = [e['element'] for e in self.data.get('elements', [])]
         for key, val in self.data.items():
-            setattr(sec_system, 'x_aflow_%s' % key, val)
+            try:
+                setattr(sec_system, 'x_mp_%s' % key, val)
+            except Exception:
+                pass
 
         # TODO should we use the MP api for workflow results?
         workflow_files = [f for f in os.listdir(
