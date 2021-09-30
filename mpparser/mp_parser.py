@@ -38,7 +38,9 @@ class MPParser(FairdiParser):
         super().__init__(
             name='parsers/mp', code_name='MaterialsProject',
             code_homepage='https://materialsproject.org',
-            mainfile_name_re=r'.*mp.+materials\.json')
+            mainfile_mime_re=r'(application/json)|(text/.*)',
+            mainfile_name_re=r'.*mp.+materials\.json',
+            mainfile_contents_re=(r'"pymatgen_version":'))
 
     def init_parser(self):
         try:
