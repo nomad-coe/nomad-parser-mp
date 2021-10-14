@@ -214,6 +214,10 @@ class MPParser(FairdiParser):
             except Exception:
                 pass
 
+        # temporary fix to go through workflow normalization
+        sec_calc = sec_run.m_create(Calculation)
+        sec_calc.system_ref = sec_system
+
         # TODO should we use the MP api for workflow results?
         workflow_files = [f for f in os.listdir(
             self.maindir) if f.endswith('.json') and f != os.path.basename(self.filepath)]
