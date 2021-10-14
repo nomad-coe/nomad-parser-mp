@@ -223,8 +223,9 @@ class MPParser(FairdiParser):
             except Exception:
                 continue
             # make sure data matches that of system
+            # TODO maybe better to simply compare filename prefix so no need to load data
             if data.get('material_id', data.get('task_id')) != self.data.get('material_id'):
-                return
+                continue
 
             if 'elasticity' in data:
                 self.parse_elastic(data)
