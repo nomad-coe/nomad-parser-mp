@@ -49,6 +49,11 @@ def test_all(parser):
     assert sec_system.x_mp_volume == approx(40.88829284866483)
     assert sec_system.x_mp_formula_anonymous == 'A'
 
+    sec_method = run.method[0]
+    assert sec_method.dft.xc_functional.exchange[0].name == 'GGA_X_PBE'
+    assert sec_method.basis_set[0].type == 'plane waves'
+    assert sec_method.basis_set[0].cell_dependent[0].planewave_cutoff.magnitude == approx(1.0830714e-16)
+
     assert len(archive.workflow) == 4
     for workflow in archive.workflow:
         if workflow.type == 'elastic':

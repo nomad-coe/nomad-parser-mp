@@ -1,0 +1,1962 @@
+{
+    "tags": [
+        "mp_2018",
+        "mp_production_old",
+        "prod"
+    ],
+    "calcs_reversed": [
+        {
+            "output": {
+                "ionic_steps": [
+                    {
+                        "e_fr_energy": -10.85073298,
+                        "e_wo_entrp": -10.85073298,
+                        "e_0_energy": 0.0,
+                        "forces": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "stress": [
+                            [
+                                -0.16249854,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -0.16249854,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                -0.16249854
+                            ]
+                        ],
+                        "electronic_steps": [
+                            {
+                                "alphaZ": 3.29317532,
+                                "ewald": -226.94490382,
+                                "hartreedc": -15.1712106,
+                                "XCdc": -18.06054975,
+                                "pawpsdc": 73.61795244,
+                                "pawaedc": -38.63681692,
+                                "eentropy": 0.0,
+                                "bandstr": 4.91891748,
+                                "atom": 206.13270273,
+                                "e_fr_energy": -10.85073313,
+                                "e_wo_entrp": -10.85073313,
+                                "e_0_energy": -10.85073313
+                            },
+                            {
+                                "e_fr_energy": -10.85073309,
+                                "e_wo_entrp": -10.85073309,
+                                "e_0_energy": -10.85073309
+                            },
+                            {
+                                "alphaZ": 3.29317532,
+                                "ewald": -226.94490382,
+                                "hartreedc": -15.17073456,
+                                "XCdc": -18.06077045,
+                                "pawpsdc": 73.61211951,
+                                "pawaedc": -38.63085963,
+                                "eentropy": 0.0,
+                                "bandstr": 4.91853792,
+                                "atom": 206.13270273,
+                                "e_fr_energy": -10.85073298,
+                                "e_wo_entrp": -10.85073298,
+                                "e_0_energy": -10.85073298
+                            }
+                        ],
+                        "structure": {
+                            "@module": "pymatgen.core.structure",
+                            "@class": "Structure",
+                            "charge": null,
+                            "lattice": {
+                                "matrix": [
+                                    [
+                                        3.34889826,
+                                        0.0,
+                                        1.93348731
+                                    ],
+                                    [
+                                        1.11629942,
+                                        3.15737156,
+                                        1.93348731
+                                    ],
+                                    [
+                                        0.0,
+                                        0.0,
+                                        3.86697462
+                                    ]
+                                ],
+                                "a": 3.866974622849504,
+                                "b": 3.866974623775052,
+                                "c": 3.86697462,
+                                "alpha": 60.000000032293386,
+                                "beta": 60.00000002437586,
+                                "gamma": 60.0000000241681,
+                                "volume": 40.888291888494884
+                            },
+                            "sites": [
+                                {
+                                    "species": [
+                                        {
+                                            "element": "Si",
+                                            "occu": 1
+                                        }
+                                    ],
+                                    "abc": [
+                                        0.875,
+                                        0.875,
+                                        0.875
+                                    ],
+                                    "xyz": [
+                                        3.9070479700000003,
+                                        2.762700115,
+                                        6.767205585
+                                    ],
+                                    "label": "Si",
+                                    "properties": {}
+                                },
+                                {
+                                    "species": [
+                                        {
+                                            "element": "Si",
+                                            "occu": 1
+                                        }
+                                    ],
+                                    "abc": [
+                                        0.125,
+                                        0.125,
+                                        0.125
+                                    ],
+                                    "xyz": [
+                                        0.55814971,
+                                        0.394671445,
+                                        0.966743655
+                                    ],
+                                    "label": "Si",
+                                    "properties": {}
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "efermi": null,
+                "bandgap": 0.8533,
+                "cbm": 6.3867,
+                "vbm": 5.5334,
+                "is_gap_direct": false,
+                "epsilon_static": [],
+                "epsilon_static_wolfe": [],
+                "epsilon_ionic": [],
+                "structure": {
+                    "@module": "pymatgen.core.structure",
+                    "@class": "Structure",
+                    "charge": null,
+                    "lattice": {
+                        "matrix": [
+                            [
+                                3.34889826,
+                                0.0,
+                                1.93348731
+                            ],
+                            [
+                                1.11629942,
+                                3.15737156,
+                                1.93348731
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                3.86697462
+                            ]
+                        ],
+                        "a": 3.866974622849504,
+                        "b": 3.866974623775052,
+                        "c": 3.86697462,
+                        "alpha": 60.000000032293386,
+                        "beta": 60.00000002437586,
+                        "gamma": 60.0000000241681,
+                        "volume": 40.888291888494884
+                    },
+                    "sites": [
+                        {
+                            "species": [
+                                {
+                                    "element": "Si",
+                                    "occu": 1
+                                }
+                            ],
+                            "abc": [
+                                0.875,
+                                0.875,
+                                0.875
+                            ],
+                            "xyz": [
+                                3.9070479700000003,
+                                2.762700115,
+                                6.767205585
+                            ],
+                            "label": "Si",
+                            "properties": {}
+                        },
+                        {
+                            "species": [
+                                {
+                                    "element": "Si",
+                                    "occu": 1
+                                }
+                            ],
+                            "abc": [
+                                0.125,
+                                0.125,
+                                0.125
+                            ],
+                            "xyz": [
+                                0.55814971,
+                                0.394671445,
+                                0.966743655
+                            ],
+                            "label": "Si",
+                            "properties": {}
+                        }
+                    ]
+                },
+                "energy": -10.85073298,
+                "energy_per_atom": -5.42536649,
+                "outcar": {
+                    "@module": "pymatgen.io.vasp.outputs",
+                    "@class": "Outcar",
+                    "efermi": 5.539,
+                    "magnetization": [],
+                    "charge": [],
+                    "total_magnetization": -1e-07,
+                    "nelect": 8.0,
+                    "is_stopped": false
+                }
+            },
+            "input": {
+                "incar": {
+                    "SYSTEM": "RubyVaspy :: Si",
+                    "PREC": "accurate",
+                    "ALGO": "FAST",
+                    "ISPIN": 2,
+                    "ICHARG": 1,
+                    "NELM": 100,
+                    "NELMIN": 3,
+                    "IBRION": 1,
+                    "EDIFF": 2e-06,
+                    "NSW": 200,
+                    "ISIF": 3,
+                    "ENCUT": 520.0,
+                    "MAGMOM": [
+                        0.6,
+                        0.6
+                    ],
+                    "LREAL": "AUTO",
+                    "ISMEAR": -5,
+                    "SIGMA": 0.05,
+                    "LWAVE": true,
+                    "LPEAD": false,
+                    "LCALCPOL": false,
+                    "LCALCEPS": false,
+                    "EFIELD_PEAD": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "LEFG": false
+                },
+                "kpoints": {
+                    "comment": "Kpoints from vasprun.xml",
+                    "nkpoints": 0,
+                    "generation_style": "Monkhorst",
+                    "kpoints": [
+                        [
+                            8,
+                            8,
+                            8
+                        ]
+                    ],
+                    "usershift": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "kpts_weights": null,
+                    "coord_type": null,
+                    "labels": null,
+                    "tet_number": 0,
+                    "tet_weight": 0,
+                    "tet_connections": null,
+                    "@module": "pymatgen.io.vasp.inputs",
+                    "@class": "Kpoints"
+                },
+                "potcar": [
+                    "Si"
+                ],
+                "potcar_spec": [
+                    {
+                        "titel": "PAW_PBE Si 05Jan2001",
+                        "hash": "b2b0ea6feb62e7cde209616683b8f7f5"
+                    }
+                ],
+                "potcar_type": [
+                    "PAW_PBE"
+                ],
+                "parameters": {
+                    "SYSTEM": "RubyVaspy :: Si",
+                    "LCOMPAT": false,
+                    "PREC": "accura",
+                    "ENMAX": 520.0,
+                    "ENAUG": 322.069,
+                    "EDIFF": 2e-06,
+                    "IALGO": 68,
+                    "IWAVPR": 11,
+                    "NBANDS": 9,
+                    "NELECT": 8.0,
+                    "ISMEAR": -5,
+                    "SIGMA": 0.05,
+                    "LREAL": true,
+                    "ROPT": [
+                        -0.00025
+                    ],
+                    "LMAXPAW": -100,
+                    "LMAXMIX": 2,
+                    "ISTART": 1,
+                    "ICHARG": 1,
+                    "INIWAV": 1,
+                    "ISPIN": 2,
+                    "LNONCOLLINEAR": false,
+                    "MAGMOM": [
+                        0.6,
+                        0.6
+                    ],
+                    "NUPDOWN": -1.0,
+                    "LSORBIT": false,
+                    "SAXIS": [
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "LSPIRAL": false,
+                    "QSPIRAL": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "LZEROZ": false,
+                    "LASPH": false,
+                    "LMETAGGA": false,
+                    "NELM": 100,
+                    "NELMDL": 0,
+                    "NELMIN": 3,
+                    "ENINI": 520.0,
+                    "LDIAG": true,
+                    "WEIMIN": 0.001,
+                    "EBREAK": 6e-08,
+                    "DEPER": 0.3,
+                    "NRMM": 4,
+                    "TIME": 0.4,
+                    "AMIX": 0.4,
+                    "BMIX": 1.0,
+                    "AMIN": 0.1,
+                    "AMIX_MAG": 1.6,
+                    "BMIX_MAG": 1.0,
+                    "IMIX": 4,
+                    "MAXMIX": -45,
+                    "WC": 100.0,
+                    "INIMIX": 1,
+                    "MIXPRE": 1,
+                    "MREMOVE": 5,
+                    "LDIPOL": false,
+                    "LMONO": false,
+                    "IDIPOL": 0,
+                    "EPSILON": 1.0,
+                    "DIPOL": [
+                        -100.0,
+                        -100.0,
+                        -100.0
+                    ],
+                    "EFIELD": 0.0,
+                    "NGX": 30,
+                    "NGY": 30,
+                    "NGZ": 30,
+                    "NGXF": 60,
+                    "NGYF": 60,
+                    "NGZF": 60,
+                    "ADDGRID": false,
+                    "NSW": 200,
+                    "IBRION": 1,
+                    "ISIF": 3,
+                    "PSTRESS": 0.0,
+                    "EDIFFG": 2e-05,
+                    "NFREE": 0,
+                    "POTIM": 0.5,
+                    "SMASS": -3.0,
+                    "TEBEG": 0.0001,
+                    "TEEND": 0.0001,
+                    "NBLOCK": 1,
+                    "KBLOCK": 200,
+                    "NPACO": 256,
+                    "APACO": 16.0,
+                    "ISYM": 2,
+                    "SYMPREC": 1e-05,
+                    "LORBIT": false,
+                    "RWIGS": [
+                        -1.0
+                    ],
+                    "NEDOS": 301,
+                    "EMIN": 10.0,
+                    "EMAX": -10.0,
+                    "EFERMI": 0.0,
+                    "NWRITE": 2,
+                    "LWAVE": true,
+                    "LCHARG": true,
+                    "LPARD": false,
+                    "LVTOT": false,
+                    "LELF": false,
+                    "LOPTICS": false,
+                    "STM": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "NPAR": 1,
+                    "NSIM": 4,
+                    "NBLK": 32,
+                    "LPLANE": true,
+                    "LSCALAPACK": false,
+                    "LSCAAWARE": false,
+                    "LSCALU": false,
+                    "LASYNC": false,
+                    "IDIOT": 3,
+                    "LMUSIC": false,
+                    "POMASS": [
+                        28.085
+                    ],
+                    "LCORR": true,
+                    "LREAL_COMPAT": false,
+                    "GGA_COMPAT": true,
+                    "LBERRY": false,
+                    "ICORELEVEL": 0,
+                    "LDAU": false,
+                    "I_CONSTRAINED_M": 0,
+                    "GGA": "--",
+                    "VOSKOWN": 0,
+                    "LHFCALC": false,
+                    "LHFONE": false,
+                    "LRHFCALC": false,
+                    "LTHOMAS": false,
+                    "LMODELHF": false,
+                    "ENCUTFOCK": 0.0,
+                    "ENCUT4O": -1.0,
+                    "EXXOEP": 0,
+                    "FOURORBIT": 0,
+                    "AEXX": 0.0,
+                    "HFALPHA": 0.0,
+                    "ALDAX": 1.0,
+                    "AGGAX": 1.0,
+                    "ALDAC": 1.0,
+                    "AGGAC": 1.0,
+                    "NKREDX": 1,
+                    "NKREDY": 1,
+                    "NKREDZ": 1,
+                    "SHIFTRED": false,
+                    "ODDONLY": false,
+                    "EVENONLY": false,
+                    "LMAXFOCK": 0,
+                    "NMAXFOCKAE": 0,
+                    "HFSCREEN": 0.0,
+                    "HFSCREENC": 0.0,
+                    "MODEL_GW": 0,
+                    "MODEL_EPS0": 12.26648757,
+                    "MODEL_ALPHA": 1.0,
+                    "LEPSILON": false,
+                    "LRPA": false,
+                    "LNABLA": false,
+                    "LVEL": false,
+                    "KINTER": 0,
+                    "CSHIFT": 0.1,
+                    "OMEGAMAX": -1.0,
+                    "ORBITALMAG": false,
+                    "LMAGBLOCH": false,
+                    "LCHIMAG": false,
+                    "LGAUGE": true,
+                    "MAGATOM": 0,
+                    "MAGDIPOL": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "AVECCONST": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "LTCTE": false,
+                    "LTETE": false,
+                    "L2ORDER": false,
+                    "LGWLF": false,
+                    "ENCUTGW": 346.66666667,
+                    "ENCUTGWSOFT": -2.0,
+                    "ENCUTLF": -1.0,
+                    "LMAXMP2": -1,
+                    "SCISSOR": 0.0,
+                    "NOMEGA": 0,
+                    "NOMEGAR": 0,
+                    "NBANDSGW": -1,
+                    "NBANDSLF": -1,
+                    "DIM": 3,
+                    "ANTIRES": 0,
+                    "LUSEW": false,
+                    "OMEGATL": -200.0,
+                    "OMEGAGRID": 0,
+                    "SELFENERGY": false,
+                    "LSPECTRAL": false,
+                    "ODDONLYGW": false,
+                    "EVENONLYGW": false,
+                    "NKREDLFX": 1,
+                    "NKREDLFY": 1,
+                    "NKREDLFZ": 1,
+                    "MAXMEM": 1024,
+                    "TELESCOPE": 0
+                },
+                "lattice_rec": {
+                    "@module": "pymatgen.core.lattice",
+                    "@class": "Lattice",
+                    "matrix": [
+                        [
+                            1.8761947420820084,
+                            -0.6633350122382161,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            1.9900050367146482,
+                            0.0
+                        ],
+                        [
+                            -0.9380973710410042,
+                            -0.663335012238216,
+                            1.6248323106862248
+                        ]
+                    ]
+                },
+                "structure": {
+                    "@module": "pymatgen.core.structure",
+                    "@class": "Structure",
+                    "charge": null,
+                    "lattice": {
+                        "matrix": [
+                            [
+                                3.34889826,
+                                0.0,
+                                1.93348731
+                            ],
+                            [
+                                1.11629942,
+                                3.15737156,
+                                1.93348731
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                3.86697462
+                            ]
+                        ],
+                        "a": 3.866974622849504,
+                        "b": 3.866974623775052,
+                        "c": 3.86697462,
+                        "alpha": 60.000000032293386,
+                        "beta": 60.00000002437586,
+                        "gamma": 60.0000000241681,
+                        "volume": 40.888291888494884
+                    },
+                    "sites": [
+                        {
+                            "species": [
+                                {
+                                    "element": "Si",
+                                    "occu": 1
+                                }
+                            ],
+                            "abc": [
+                                0.875,
+                                0.875,
+                                0.875
+                            ],
+                            "xyz": [
+                                3.9070479700000003,
+                                2.762700115,
+                                6.767205585
+                            ],
+                            "label": "Si",
+                            "properties": {}
+                        },
+                        {
+                            "species": [
+                                {
+                                    "element": "Si",
+                                    "occu": 1
+                                }
+                            ],
+                            "abc": [
+                                0.125,
+                                0.125,
+                                0.125
+                            ],
+                            "xyz": [
+                                0.55814971,
+                                0.394671445,
+                                0.966743655
+                            ],
+                            "label": "Si",
+                            "properties": {}
+                        }
+                    ]
+                }
+            },
+            "vasp_version": "5.2.2"
+        },
+        {
+            "output": {
+                "ionic_steps": [
+                    {
+                        "e_fr_energy": -10.84561065,
+                        "e_wo_entrp": -10.84561065,
+                        "e_0_energy": 0.0,
+                        "forces": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "stress": [
+                            [
+                                19.24640736,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                19.24640736,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                19.24640736
+                            ]
+                        ],
+                        "electronic_steps": [
+                            {
+                                "alphaZ": 3.36321288,
+                                "ewald": -228.5424805,
+                                "hartreedc": -11.00522832,
+                                "XCdc": -18.52318316,
+                                "pawpsdc": 65.91709927,
+                                "pawaedc": -30.72587073,
+                                "eentropy": 0.0,
+                                "bandstr": 18.71098361,
+                                "atom": 206.13270273,
+                                "e_fr_energy": 5.32723578,
+                                "e_wo_entrp": 5.32723578,
+                                "e_0_energy": 5.32723578
+                            },
+                            {
+                                "e_fr_energy": -10.49246784,
+                                "e_wo_entrp": -10.49246784,
+                                "e_0_energy": -10.49246784
+                            },
+                            {
+                                "e_fr_energy": -10.8364302,
+                                "e_wo_entrp": -10.8364302,
+                                "e_0_energy": -10.8364302
+                            },
+                            {
+                                "e_fr_energy": -10.83859833,
+                                "e_wo_entrp": -10.83859833,
+                                "e_0_energy": -10.83859833
+                            },
+                            {
+                                "e_fr_energy": -10.83860533,
+                                "e_wo_entrp": -10.83860533,
+                                "e_0_energy": -10.83860533
+                            },
+                            {
+                                "e_fr_energy": -10.88878849,
+                                "e_wo_entrp": -10.88878849,
+                                "e_0_energy": -10.88878849
+                            },
+                            {
+                                "e_fr_energy": -10.82793408,
+                                "e_wo_entrp": -10.82793408,
+                                "e_0_energy": -10.82793408
+                            },
+                            {
+                                "e_fr_energy": -10.84608569,
+                                "e_wo_entrp": -10.84608569,
+                                "e_0_energy": -10.84608569
+                            },
+                            {
+                                "e_fr_energy": -10.84563969,
+                                "e_wo_entrp": -10.84563969,
+                                "e_0_energy": -10.84563969
+                            },
+                            {
+                                "e_fr_energy": -10.84559227,
+                                "e_wo_entrp": -10.84559227,
+                                "e_0_energy": -10.84559227
+                            },
+                            {
+                                "e_fr_energy": -10.84560507,
+                                "e_wo_entrp": -10.84560507,
+                                "e_0_energy": -10.84560507
+                            },
+                            {
+                                "e_fr_energy": -10.8456083,
+                                "e_wo_entrp": -10.8456083,
+                                "e_0_energy": -10.8456083
+                            },
+                            {
+                                "e_fr_energy": -10.84561064,
+                                "e_wo_entrp": -10.84561064,
+                                "e_0_energy": -10.84561064
+                            },
+                            {
+                                "alphaZ": 3.36321288,
+                                "ewald": -228.5424805,
+                                "hartreedc": -14.91982772,
+                                "XCdc": -17.96446554,
+                                "pawpsdc": 74.28640719,
+                                "pawaedc": -39.32362918,
+                                "eentropy": 0.0,
+                                "bandstr": 6.12246949,
+                                "atom": 206.13270273,
+                                "e_fr_energy": -10.84561065,
+                                "e_wo_entrp": -10.84561065,
+                                "e_0_energy": -10.84561065
+                            }
+                        ],
+                        "structure": {
+                            "@module": "pymatgen.core.structure",
+                            "@class": "Structure",
+                            "charge": null,
+                            "lattice": {
+                                "matrix": [
+                                    [
+                                        3.32548851,
+                                        0.0,
+                                        1.91997169
+                                    ],
+                                    [
+                                        1.10849617,
+                                        3.13530064,
+                                        1.91997169
+                                    ],
+                                    [
+                                        0.0,
+                                        0.0,
+                                        3.83994338
+                                    ]
+                                ],
+                                "a": 3.839943374653261,
+                                "b": 3.839943378813096,
+                                "c": 3.83994338,
+                                "alpha": 59.99999998977525,
+                                "beta": 59.99999995393976,
+                                "gamma": 60.00000000512866,
+                                "volume": 40.036809671145996
+                            },
+                            "sites": [
+                                {
+                                    "species": [
+                                        {
+                                            "element": "Si",
+                                            "occu": 1
+                                        }
+                                    ],
+                                    "abc": [
+                                        0.875,
+                                        0.875,
+                                        0.875
+                                    ],
+                                    "xyz": [
+                                        3.879736595,
+                                        2.74338806,
+                                        6.719900914999999
+                                    ],
+                                    "label": "Si",
+                                    "properties": {}
+                                },
+                                {
+                                    "species": [
+                                        {
+                                            "element": "Si",
+                                            "occu": 1
+                                        }
+                                    ],
+                                    "abc": [
+                                        0.125,
+                                        0.125,
+                                        0.125
+                                    ],
+                                    "xyz": [
+                                        0.554248085,
+                                        0.39191258,
+                                        0.959985845
+                                    ],
+                                    "label": "Si",
+                                    "properties": {}
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "e_fr_energy": -10.84856901,
+                        "e_wo_entrp": -10.84856901,
+                        "e_0_energy": 0.0,
+                        "forces": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "stress": [
+                            [
+                                -11.86669137,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -11.86669137,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                -11.86669137
+                            ]
+                        ],
+                        "electronic_steps": [
+                            {
+                                "alphaZ": 3.24882605,
+                                "ewald": -225.92153864,
+                                "hartreedc": -14.74869226,
+                                "XCdc": -18.1340018,
+                                "pawpsdc": 74.28640378,
+                                "pawaedc": -39.32360966,
+                                "eentropy": 0.0,
+                                "bandstr": 3.60475153,
+                                "atom": 206.13270273,
+                                "e_fr_energy": -10.85515827,
+                                "e_wo_entrp": -10.85515827,
+                                "e_0_energy": -10.85515827
+                            },
+                            {
+                                "e_fr_energy": -10.85085897,
+                                "e_wo_entrp": -10.85085897,
+                                "e_0_energy": -10.85085897
+                            },
+                            {
+                                "e_fr_energy": -10.84857972,
+                                "e_wo_entrp": -10.84857972,
+                                "e_0_energy": -10.84857972
+                            },
+                            {
+                                "e_fr_energy": -10.84857033,
+                                "e_wo_entrp": -10.84857033,
+                                "e_0_energy": -10.84857033
+                            },
+                            {
+                                "alphaZ": 3.24882605,
+                                "ewald": -225.92153864,
+                                "hartreedc": -15.33150326,
+                                "XCdc": -18.12268928,
+                                "pawpsdc": 73.17676583,
+                                "pawaedc": -38.18364906,
+                                "eentropy": 0.0,
+                                "bandstr": 4.15251661,
+                                "atom": 206.13270273,
+                                "e_fr_energy": -10.84856901,
+                                "e_wo_entrp": -10.84856901,
+                                "e_0_energy": -10.84856901
+                            }
+                        ],
+                        "structure": {
+                            "@module": "pymatgen.core.structure",
+                            "@class": "Structure",
+                            "charge": null,
+                            "lattice": {
+                                "matrix": [
+                                    [
+                                        3.36406789,
+                                        0.0,
+                                        1.9422455
+                                    ],
+                                    [
+                                        1.12135596,
+                                        3.17167362,
+                                        1.9422455
+                                    ],
+                                    [
+                                        0.0,
+                                        0.0,
+                                        3.884491
+                                    ]
+                                ],
+                                "a": 3.8844910027955146,
+                                "b": 3.88449099923036,
+                                "c": 3.884491,
+                                "alpha": 59.999999993445854,
+                                "beta": 60.00000002380618,
+                                "gamma": 60.000000034676745,
+                                "volume": 41.44645222118927
+                            },
+                            "sites": [
+                                {
+                                    "species": [
+                                        {
+                                            "element": "Si",
+                                            "occu": 1
+                                        }
+                                    ],
+                                    "abc": [
+                                        0.875,
+                                        0.875,
+                                        0.875
+                                    ],
+                                    "xyz": [
+                                        3.9247458687499996,
+                                        2.7752144175,
+                                        6.79785925
+                                    ],
+                                    "label": "Si",
+                                    "properties": {}
+                                },
+                                {
+                                    "species": [
+                                        {
+                                            "element": "Si",
+                                            "occu": 1
+                                        }
+                                    ],
+                                    "abc": [
+                                        0.125,
+                                        0.125,
+                                        0.125
+                                    ],
+                                    "xyz": [
+                                        0.56067798125,
+                                        0.3964592025,
+                                        0.97112275
+                                    ],
+                                    "label": "Si",
+                                    "properties": {}
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "e_fr_energy": -10.8506626,
+                        "e_wo_entrp": -10.8506626,
+                        "e_0_energy": 0.0,
+                        "forces": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "stress": [
+                            [
+                                -0.1677613,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -0.1677613,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                -0.1677613
+                            ]
+                        ],
+                        "electronic_steps": [
+                            {
+                                "alphaZ": 3.29317532,
+                                "ewald": -226.94490382,
+                                "hartreedc": -15.40294952,
+                                "XCdc": -18.05654745,
+                                "pawpsdc": 73.18983809,
+                                "pawaedc": -38.19702514,
+                                "eentropy": 0.0,
+                                "bandstr": 5.13404259,
+                                "atom": 206.13270273,
+                                "e_fr_energy": -10.85166719,
+                                "e_wo_entrp": -10.85166719,
+                                "e_0_energy": -10.85166719
+                            },
+                            {
+                                "e_fr_energy": -10.85100227,
+                                "e_wo_entrp": -10.85100227,
+                                "e_0_energy": -10.85100227
+                            },
+                            {
+                                "e_fr_energy": -10.85065894,
+                                "e_wo_entrp": -10.85065894,
+                                "e_0_energy": -10.85065894
+                            },
+                            {
+                                "e_fr_energy": -10.85066163,
+                                "e_wo_entrp": -10.85066163,
+                                "e_0_energy": -10.85066163
+                            },
+                            {
+                                "alphaZ": 3.29317532,
+                                "ewald": -226.94490382,
+                                "hartreedc": -15.17124031,
+                                "XCdc": -18.06055383,
+                                "pawpsdc": 73.6179232,
+                                "pawaedc": -38.63673063,
+                                "eentropy": 0.0,
+                                "bandstr": 4.91896474,
+                                "atom": 206.13270273,
+                                "e_fr_energy": -10.8506626,
+                                "e_wo_entrp": -10.8506626,
+                                "e_0_energy": -10.8506626
+                            }
+                        ],
+                        "structure": {
+                            "@module": "pymatgen.core.structure",
+                            "@class": "Structure",
+                            "charge": null,
+                            "lattice": {
+                                "matrix": [
+                                    [
+                                        3.34889826,
+                                        0.0,
+                                        1.93348731
+                                    ],
+                                    [
+                                        1.11629942,
+                                        3.15737156,
+                                        1.93348731
+                                    ],
+                                    [
+                                        0.0,
+                                        0.0,
+                                        3.86697462
+                                    ]
+                                ],
+                                "a": 3.866974622849504,
+                                "b": 3.866974623775052,
+                                "c": 3.86697462,
+                                "alpha": 60.000000032293386,
+                                "beta": 60.00000002437586,
+                                "gamma": 60.0000000241681,
+                                "volume": 40.888291888494884
+                            },
+                            "sites": [
+                                {
+                                    "species": [
+                                        {
+                                            "element": "Si",
+                                            "occu": 1
+                                        }
+                                    ],
+                                    "abc": [
+                                        0.875,
+                                        0.875,
+                                        0.875
+                                    ],
+                                    "xyz": [
+                                        3.9070479700000003,
+                                        2.762700115,
+                                        6.767205585
+                                    ],
+                                    "label": "Si",
+                                    "properties": {}
+                                },
+                                {
+                                    "species": [
+                                        {
+                                            "element": "Si",
+                                            "occu": 1
+                                        }
+                                    ],
+                                    "abc": [
+                                        0.125,
+                                        0.125,
+                                        0.125
+                                    ],
+                                    "xyz": [
+                                        0.55814971,
+                                        0.394671445,
+                                        0.966743655
+                                    ],
+                                    "label": "Si",
+                                    "properties": {}
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "efermi": 5.53917214,
+                "bandgap": 0.8533,
+                "cbm": 6.3868,
+                "vbm": 5.5335,
+                "is_gap_direct": false,
+                "epsilon_static": [],
+                "epsilon_static_wolfe": [],
+                "epsilon_ionic": [],
+                "structure": {
+                    "@module": "pymatgen.core.structure",
+                    "@class": "Structure",
+                    "charge": null,
+                    "lattice": {
+                        "matrix": [
+                            [
+                                3.34889826,
+                                0.0,
+                                1.93348731
+                            ],
+                            [
+                                1.11629942,
+                                3.15737156,
+                                1.93348731
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                3.86697462
+                            ]
+                        ],
+                        "a": 3.866974622849504,
+                        "b": 3.866974623775052,
+                        "c": 3.86697462,
+                        "alpha": 60.000000032293386,
+                        "beta": 60.00000002437586,
+                        "gamma": 60.0000000241681,
+                        "volume": 40.888291888494884
+                    },
+                    "sites": [
+                        {
+                            "species": [
+                                {
+                                    "element": "Si",
+                                    "occu": 1
+                                }
+                            ],
+                            "abc": [
+                                0.875,
+                                0.875,
+                                0.875
+                            ],
+                            "xyz": [
+                                3.9070479700000003,
+                                2.762700115,
+                                6.767205585
+                            ],
+                            "label": "Si",
+                            "properties": {}
+                        },
+                        {
+                            "species": [
+                                {
+                                    "element": "Si",
+                                    "occu": 1
+                                }
+                            ],
+                            "abc": [
+                                0.125,
+                                0.125,
+                                0.125
+                            ],
+                            "xyz": [
+                                0.55814971,
+                                0.394671445,
+                                0.966743655
+                            ],
+                            "label": "Si",
+                            "properties": {}
+                        }
+                    ]
+                },
+                "energy": -10.8506626,
+                "energy_per_atom": -5.4253313,
+                "is_metal": false,
+                "outcar": {
+                    "@module": "pymatgen.io.vasp.outputs",
+                    "@class": "Outcar",
+                    "efermi": 5.5392,
+                    "magnetization": [],
+                    "charge": [],
+                    "total_magnetization": -4e-07,
+                    "nelect": 8.0,
+                    "is_stopped": false
+                }
+            },
+            "input": {
+                "incar": {
+                    "SYSTEM": "RubyVaspy :: Si",
+                    "PREC": "accurate",
+                    "ALGO": "FAST",
+                    "ISPIN": 2,
+                    "ICHARG": 1,
+                    "NELM": 100,
+                    "NELMIN": 3,
+                    "IBRION": 2,
+                    "EDIFF": 2e-06,
+                    "NSW": 200,
+                    "ISIF": 3,
+                    "ENCUT": 520.0,
+                    "MAGMOM": [
+                        0.6,
+                        0.6
+                    ],
+                    "LREAL": "AUTO",
+                    "ISMEAR": -5,
+                    "SIGMA": 0.05,
+                    "LWAVE": true,
+                    "LPEAD": false,
+                    "LCALCPOL": false,
+                    "LCALCEPS": false,
+                    "EFIELD_PEAD": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "LEFG": false
+                },
+                "kpoints": {
+                    "comment": "Kpoints from vasprun.xml",
+                    "nkpoints": 0,
+                    "generation_style": "Monkhorst",
+                    "kpoints": [
+                        [
+                            8,
+                            8,
+                            8
+                        ]
+                    ],
+                    "usershift": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "kpts_weights": null,
+                    "coord_type": null,
+                    "labels": null,
+                    "tet_number": 0,
+                    "tet_weight": 0,
+                    "tet_connections": null,
+                    "@module": "pymatgen.io.vasp.inputs",
+                    "@class": "Kpoints"
+                },
+                "potcar": [
+                    "Si"
+                ],
+                "potcar_spec": [
+                    {
+                        "titel": "PAW_PBE Si 05Jan2001",
+                        "hash": "b2b0ea6feb62e7cde209616683b8f7f5"
+                    }
+                ],
+                "potcar_type": [
+                    "PAW_PBE"
+                ],
+                "parameters": {
+                    "SYSTEM": "RubyVaspy :: Si",
+                    "LCOMPAT": false,
+                    "PREC": "accura",
+                    "ENMAX": 520.0,
+                    "ENAUG": 322.069,
+                    "EDIFF": 2e-06,
+                    "IALGO": 68,
+                    "IWAVPR": 11,
+                    "NBANDS": 9,
+                    "NELECT": 8.0,
+                    "ISMEAR": -5,
+                    "SIGMA": 0.05,
+                    "LREAL": true,
+                    "ROPT": [
+                        -0.00025
+                    ],
+                    "LMAXPAW": -100,
+                    "LMAXMIX": 2,
+                    "ISTART": 0,
+                    "ICHARG": 1,
+                    "INIWAV": 1,
+                    "ISPIN": 2,
+                    "LNONCOLLINEAR": false,
+                    "MAGMOM": [
+                        0.6,
+                        0.6
+                    ],
+                    "NUPDOWN": -1.0,
+                    "LSORBIT": false,
+                    "SAXIS": [
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "LSPIRAL": false,
+                    "QSPIRAL": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "LZEROZ": false,
+                    "LASPH": false,
+                    "LMETAGGA": false,
+                    "NELM": 100,
+                    "NELMDL": -5,
+                    "NELMIN": 3,
+                    "ENINI": 520.0,
+                    "LDIAG": true,
+                    "WEIMIN": 0.001,
+                    "EBREAK": 6e-08,
+                    "DEPER": 0.3,
+                    "NRMM": 4,
+                    "TIME": 0.4,
+                    "AMIX": 0.4,
+                    "BMIX": 1.0,
+                    "AMIN": 0.1,
+                    "AMIX_MAG": 1.6,
+                    "BMIX_MAG": 1.0,
+                    "IMIX": 4,
+                    "MAXMIX": -45,
+                    "WC": 100.0,
+                    "INIMIX": 1,
+                    "MIXPRE": 1,
+                    "MREMOVE": 5,
+                    "LDIPOL": false,
+                    "LMONO": false,
+                    "IDIPOL": 0,
+                    "EPSILON": 1.0,
+                    "DIPOL": [
+                        -100.0,
+                        -100.0,
+                        -100.0
+                    ],
+                    "EFIELD": 0.0,
+                    "NGX": 30,
+                    "NGY": 30,
+                    "NGZ": 30,
+                    "NGXF": 60,
+                    "NGYF": 60,
+                    "NGZF": 60,
+                    "ADDGRID": false,
+                    "NSW": 200,
+                    "IBRION": 2,
+                    "ISIF": 3,
+                    "PSTRESS": 0.0,
+                    "EDIFFG": 2e-05,
+                    "NFREE": 1,
+                    "POTIM": 0.5,
+                    "SMASS": -3.0,
+                    "TEBEG": 0.0001,
+                    "TEEND": 0.0001,
+                    "NBLOCK": 1,
+                    "KBLOCK": 200,
+                    "NPACO": 256,
+                    "APACO": 16.0,
+                    "ISYM": 2,
+                    "SYMPREC": 1e-05,
+                    "LORBIT": false,
+                    "RWIGS": [
+                        -1.0
+                    ],
+                    "NEDOS": 301,
+                    "EMIN": 10.0,
+                    "EMAX": -10.0,
+                    "EFERMI": 0.0,
+                    "NWRITE": 2,
+                    "LWAVE": true,
+                    "LCHARG": true,
+                    "LPARD": false,
+                    "LVTOT": false,
+                    "LELF": false,
+                    "LOPTICS": false,
+                    "STM": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "NPAR": 1,
+                    "NSIM": 4,
+                    "NBLK": 32,
+                    "LPLANE": true,
+                    "LSCALAPACK": false,
+                    "LSCAAWARE": false,
+                    "LSCALU": false,
+                    "LASYNC": false,
+                    "IDIOT": 3,
+                    "LMUSIC": false,
+                    "POMASS": [
+                        28.085
+                    ],
+                    "LCORR": true,
+                    "LREAL_COMPAT": false,
+                    "GGA_COMPAT": true,
+                    "LBERRY": false,
+                    "ICORELEVEL": 0,
+                    "LDAU": false,
+                    "I_CONSTRAINED_M": 0,
+                    "GGA": "--",
+                    "VOSKOWN": 0,
+                    "LHFCALC": false,
+                    "LHFONE": false,
+                    "LRHFCALC": false,
+                    "LTHOMAS": false,
+                    "LMODELHF": false,
+                    "ENCUTFOCK": 0.0,
+                    "ENCUT4O": -1.0,
+                    "EXXOEP": 0,
+                    "FOURORBIT": 0,
+                    "AEXX": 0.0,
+                    "HFALPHA": 0.0,
+                    "ALDAX": 1.0,
+                    "AGGAX": 1.0,
+                    "ALDAC": 1.0,
+                    "AGGAC": 1.0,
+                    "NKREDX": 1,
+                    "NKREDY": 1,
+                    "NKREDZ": 1,
+                    "SHIFTRED": false,
+                    "ODDONLY": false,
+                    "EVENONLY": false,
+                    "LMAXFOCK": 0,
+                    "NMAXFOCKAE": 0,
+                    "HFSCREEN": 0.0,
+                    "HFSCREENC": 0.0,
+                    "MODEL_GW": 0,
+                    "MODEL_EPS0": 12.01104288,
+                    "MODEL_ALPHA": 1.0,
+                    "LEPSILON": false,
+                    "LRPA": false,
+                    "LNABLA": false,
+                    "LVEL": false,
+                    "KINTER": 0,
+                    "CSHIFT": 0.1,
+                    "OMEGAMAX": -1.0,
+                    "ORBITALMAG": false,
+                    "LMAGBLOCH": false,
+                    "LCHIMAG": false,
+                    "LGAUGE": true,
+                    "MAGATOM": 0,
+                    "MAGDIPOL": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "AVECCONST": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "LTCTE": false,
+                    "LTETE": false,
+                    "L2ORDER": false,
+                    "LGWLF": false,
+                    "ENCUTGW": 346.66666667,
+                    "ENCUTGWSOFT": -2.0,
+                    "ENCUTLF": -1.0,
+                    "LMAXMP2": -1,
+                    "SCISSOR": 0.0,
+                    "NOMEGA": 0,
+                    "NOMEGAR": 0,
+                    "NBANDSGW": -1,
+                    "NBANDSLF": -1,
+                    "DIM": 3,
+                    "ANTIRES": 0,
+                    "LUSEW": false,
+                    "OMEGATL": -200.0,
+                    "OMEGAGRID": 0,
+                    "SELFENERGY": false,
+                    "LSPECTRAL": false,
+                    "ODDONLYGW": false,
+                    "EVENONLYGW": false,
+                    "NKREDLFX": 1,
+                    "NKREDLFY": 1,
+                    "NKREDLFZ": 1,
+                    "MAXMEM": 1024,
+                    "TELESCOPE": 0
+                },
+                "lattice_rec": {
+                    "@module": "pymatgen.core.lattice",
+                    "@class": "Lattice",
+                    "matrix": [
+                        [
+                            1.8761947420820084,
+                            -0.6633350122382161,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            1.9900050367146482,
+                            0.0
+                        ],
+                        [
+                            -0.9380973710410042,
+                            -0.663335012238216,
+                            1.6248323106862248
+                        ]
+                    ]
+                },
+                "structure": {
+                    "@module": "pymatgen.core.structure",
+                    "@class": "Structure",
+                    "charge": null,
+                    "lattice": {
+                        "matrix": [
+                            [
+                                3.32548851,
+                                0.0,
+                                1.91997169
+                            ],
+                            [
+                                1.10849617,
+                                3.13530064,
+                                1.91997169
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                3.83994338
+                            ]
+                        ],
+                        "a": 3.839943374653261,
+                        "b": 3.839943378813096,
+                        "c": 3.83994338,
+                        "alpha": 59.99999998977525,
+                        "beta": 59.99999995393976,
+                        "gamma": 60.00000000512866,
+                        "volume": 40.036809671145996
+                    },
+                    "sites": [
+                        {
+                            "species": [
+                                {
+                                    "element": "Si",
+                                    "occu": 1
+                                }
+                            ],
+                            "abc": [
+                                0.875,
+                                0.875,
+                                0.875
+                            ],
+                            "xyz": [
+                                3.879736595,
+                                2.74338806,
+                                6.719900914999999
+                            ],
+                            "label": "Si",
+                            "properties": {}
+                        },
+                        {
+                            "species": [
+                                {
+                                    "element": "Si",
+                                    "occu": 1
+                                }
+                            ],
+                            "abc": [
+                                0.125,
+                                0.125,
+                                0.125
+                            ],
+                            "xyz": [
+                                0.554248085,
+                                0.39191258,
+                                0.959985845
+                            ],
+                            "label": "Si",
+                            "properties": {}
+                        }
+                    ]
+                }
+            },
+            "vasp_version": "5.2.2"
+        }
+    ],
+    "task_type": "GGA_Structure_Optimization",
+    "task_id": "mp-149",
+    "nsites": 2,
+    "elements": [
+        {
+            "@module": "pymatgen.core.periodic_table",
+            "@class": "Element",
+            "element": "Si"
+        }
+    ],
+    "nelements": 1,
+    "composition": null,
+    "composition_reduced": {
+        "Si": 1.0
+    },
+    "formula_pretty": "Si",
+    "formula_anonymous": "A",
+    "chemsys": "Si",
+    "orig_inputs": {
+        "incar": {
+            "ISIF": 3,
+            "IBRION": 2,
+            "NSW": 200,
+            "NELM": 100,
+            "ISPIN": 2,
+            "ALGO": "Fast",
+            "SYSTEM": "Rubyvaspy :: si",
+            "ENCUT": 520,
+            "LREAL": "Auto",
+            "EDIFF": 2e-06,
+            "PREC": "Accurate",
+            "NELMIN": 3,
+            "ISMEAR": -5,
+            "SIGMA": 0.05,
+            "LWAVE": true,
+            "ICHARG": 1,
+            "NPAR": 1,
+            "MAGMOM": [
+                0.6,
+                0.6
+            ]
+        },
+        "poscar": {
+            "@module": "pymatgen.io.vasp.inputs",
+            "@class": "Poscar",
+            "structure": {
+                "@module": "pymatgen.core.structure",
+                "@class": "Structure",
+                "charge": null,
+                "lattice": {
+                    "matrix": [
+                        [
+                            3.325488512,
+                            0.0,
+                            1.9199716876
+                        ],
+                        [
+                            1.1084961707,
+                            3.1353006368,
+                            1.9199716876
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            3.8399433752
+                        ]
+                    ],
+                    "a": 3.8399433751853125,
+                    "b": 3.8399433752023793,
+                    "c": 3.8399433752,
+                    "alpha": 60.000000000020506,
+                    "beta": 59.999999999873474,
+                    "gamma": 59.99999999956532,
+                    "volume": 40.036809604314996
+                },
+                "sites": [
+                    {
+                        "species": [
+                            {
+                                "element": "Si",
+                                "occu": 1
+                            }
+                        ],
+                        "abc": [
+                            0.875,
+                            0.875,
+                            0.875
+                        ],
+                        "xyz": [
+                            3.8797365973625,
+                            2.7433880572,
+                            6.7199009065999995
+                        ],
+                        "label": "Si",
+                        "properties": {}
+                    },
+                    {
+                        "species": [
+                            {
+                                "element": "Si",
+                                "occu": 1
+                            }
+                        ],
+                        "abc": [
+                            0.125,
+                            0.125,
+                            0.125
+                        ],
+                        "xyz": [
+                            0.5542480853375,
+                            0.3919125796,
+                            0.9599858438
+                        ],
+                        "label": "Si",
+                        "properties": {}
+                    }
+                ]
+            },
+            "true_names": true,
+            "selective_dynamics": null,
+            "velocities": null,
+            "predictor_corrector": null,
+            "comment": "Poscar v1.1 :: 1 :: Si"
+        },
+        "kpoints": {
+            "comment": "Automatic kpoint scheme",
+            "nkpoints": 0,
+            "generation_style": "Monkhorst",
+            "kpoints": [
+                [
+                    8,
+                    8,
+                    8
+                ]
+            ],
+            "usershift": [
+                0,
+                0,
+                0
+            ],
+            "kpts_weights": null,
+            "coord_type": null,
+            "labels": null,
+            "tet_number": 0,
+            "tet_weight": 0,
+            "tet_connections": null,
+            "@module": "pymatgen.io.vasp.inputs",
+            "@class": "Kpoints"
+        },
+        "potcar": null
+    },
+    "input": {
+        "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": null,
+            "lattice": {
+                "matrix": [
+                    [
+                        3.32548851,
+                        0.0,
+                        1.91997169
+                    ],
+                    [
+                        1.10849617,
+                        3.13530064,
+                        1.91997169
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        3.83994338
+                    ]
+                ],
+                "a": 3.839943374653261,
+                "b": 3.839943378813096,
+                "c": 3.83994338,
+                "alpha": 59.99999998977525,
+                "beta": 59.99999995393976,
+                "gamma": 60.00000000512866,
+                "volume": 40.036809671145996
+            },
+            "sites": [
+                {
+                    "species": [
+                        {
+                            "element": "Si",
+                            "occu": 1
+                        }
+                    ],
+                    "abc": [
+                        0.875,
+                        0.875,
+                        0.875
+                    ],
+                    "xyz": [
+                        3.879736595,
+                        2.74338806,
+                        6.719900914999999
+                    ],
+                    "label": "Si",
+                    "properties": {}
+                },
+                {
+                    "species": [
+                        {
+                            "element": "Si",
+                            "occu": 1
+                        }
+                    ],
+                    "abc": [
+                        0.125,
+                        0.125,
+                        0.125
+                    ],
+                    "xyz": [
+                        0.554248085,
+                        0.39191258,
+                        0.959985845
+                    ],
+                    "label": "Si",
+                    "properties": {}
+                }
+            ]
+        }
+    },
+    "output": {
+        "structure": {
+            "@module": "pymatgen.core.structure",
+            "@class": "Structure",
+            "charge": null,
+            "lattice": {
+                "matrix": [
+                    [
+                        3.34889826,
+                        0.0,
+                        1.93348731
+                    ],
+                    [
+                        1.11629942,
+                        3.15737156,
+                        1.93348731
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        3.86697462
+                    ]
+                ],
+                "a": 3.866974622849504,
+                "b": 3.866974623775052,
+                "c": 3.86697462,
+                "alpha": 60.000000032293386,
+                "beta": 60.00000002437586,
+                "gamma": 60.0000000241681,
+                "volume": 40.888291888494884
+            },
+            "sites": [
+                {
+                    "species": [
+                        {
+                            "element": "Si",
+                            "occu": 1
+                        }
+                    ],
+                    "abc": [
+                        0.875,
+                        0.875,
+                        0.875
+                    ],
+                    "xyz": [
+                        3.9070479700000003,
+                        2.762700115,
+                        6.767205585
+                    ],
+                    "label": "Si",
+                    "properties": {}
+                },
+                {
+                    "species": [
+                        {
+                            "element": "Si",
+                            "occu": 1
+                        }
+                    ],
+                    "abc": [
+                        0.125,
+                        0.125,
+                        0.125
+                    ],
+                    "xyz": [
+                        0.55814971,
+                        0.394671445,
+                        0.966743655
+                    ],
+                    "label": "Si",
+                    "properties": {}
+                }
+            ]
+        },
+        "density": 2.2811943005642012,
+        "energy": -10.85073298,
+        "forces": [
+            [
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "stress": [
+            [
+                -0.16249854,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                -0.16249854,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                -0.16249854
+            ]
+        ]
+    },
+    "custodian": null,
+    "analysis": {
+        "delta_volume": 0.8514822173488881,
+        "delta_volume_percent": 0.021267484206228853,
+        "max_force": 0.0,
+        "warnings": [],
+        "errors": []
+    },
+    "last_updated": "2011-05-12 17:07:33"
+}
