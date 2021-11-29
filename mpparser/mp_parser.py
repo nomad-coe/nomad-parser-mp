@@ -29,7 +29,7 @@ from nomad.datamodel.metainfo.workflow import (
     Phonon)
 from nomad.datamodel.metainfo.simulation.system import System, Atoms
 from nomad.datamodel.metainfo.simulation.method import (
-    Method, DFT, XCFunctional, Functional, BasisSet, BasisSetCellDependent)
+    Method, DFT, Electronic, XCFunctional, Functional, BasisSet, BasisSetCellDependent)
 from nomad.datamodel.metainfo.simulation.calculation import (
     Calculation, Dos, DosValues, BandStructure, BandEnergies)
 from mpparser.metainfo.mp import Composition, Symmetry
@@ -186,6 +186,7 @@ class MPParser(FairdiParser):
                     sec_xc_functional.contributions.append(Functional(name=xc_functional))
 
         sec_method.dft = DFT(xc_functional=sec_xc_functional)
+        sec_method.electronic = Electronic(method="DFT")
 
         encut = data['calcs_reversed'][0].get('input', {}).get('incar', {}).get('ENCUT')
         prec = data['calcs_reversed'][0].get('input', {}).get('incar', {}).get('PREC')
