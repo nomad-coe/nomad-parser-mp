@@ -245,7 +245,7 @@ class MPParser(FairdiParser):
                     pass
 
         # misc
-        sec_system.x_mp_elements = [e['element'] for e in self.data.get('elements', [])]
+        sec_system.x_mp_elements = self.data.get('elements', [])
         for key, val in self.data.items():
             try:
                 setattr(sec_system, 'x_mp_%s' % key, val)
