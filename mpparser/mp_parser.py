@@ -209,7 +209,7 @@ class MPParser(FairdiParser):
         self.init_parser()
 
         sec_run = archive.m_create(Run)
-        sec_run.program = Program(name='MaterialsProject')
+        sec_run.program = Program(name='MaterialsProject', version="1.0.0")
 
         #  TODO system should be referenced
         structure = self.data.get('structure')
